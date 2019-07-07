@@ -1,0 +1,294 @@
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-21 18:01:52
+ * @version $Id$
+ */
+/*获取设置样式*/
+function css(obj,attr,value){
+	if(arguments.length === 2){		
+		if(typeof attr === 'string'){
+			if(obj.currentStyle){
+				return obj.currentStyle[attr];
+			}else{
+				return getComputedStyle(obj,false)[attr];
+			}
+		}else{
+			for(var key in attr){
+				obj.style[key] = attr[key];
+			}	
+		}
+	}else if(arguments.length === 3){
+		obj.style[attr] = value;
+	}
+}
+
+/*绑定事件*/
+function addEvent(obj,type,fn){
+	if(obj.addEventListener){
+		obj.addEventListener(type,function (ev){
+			var rtn=fn.call(obj);
+			if(rtn==false)       
+			{
+				ev.cancelBubble=true;
+				ev.preventDefault();
+			}
+		},false);
+	}else{
+		obj.attachEvent('on'+type,function (){
+			var rtn=fn.call(obj);
+			if(rtn==false)
+			{
+				event.cancelBubble=true;
+				return false;
+			}
+		})
+	}
+}
+
+function Q(arg){
+	this.aElements = [];
+
+	switch (typeof arg){
+		case 'string':
+			switch(arg.charAt(0)){
+				case '#':
+					if(/\s/.test(arg)){
+						var aArg = arg.split(' ');
+						this.aElements = getEle(aArg[0],aArg[1])
+					}else{
+						this.aElements.push(document.getElementById(arg.substring(1)))
+					}
+					break;
+			}
+			break;
+		case 'function':
+			addEvent(window,'load',arg);
+			break;
+	}
+
+	return this.aElements;
+}
+
+function getEle(f,s){
+	var result = [];
+	var elements = null;
+	if(s.charAt(0) == '.'){
+		if(typeof f === 'string'){
+			elements = document.getElementById(f.substring(1)).getElementsByTagName('*');
+		}else if(typeof f === 'object'){
+			elements = f.getElementsByTagName('*');
+		}
+		for(var i=0;i<elements.length;i++){
+			if(/\s/.test(elements[i].className)){
+				var names = elements[i].className.split(' ');
+				if(strComper(s.substring(1),names)){
+					result.push(elements[i]);
+				}
+			}else{
+				if(elements[i].className == s.substring(1)){
+					result.push(elements[i]);
+				}
+			}
+		}
+	}else{
+		if(typeof f === 'string'){
+			result = document.getElementById(f.substring(1)).getElementsByTagName(s);
+		}else if(typeof f === 'object'){
+			result = f.getElementsByTagName(s);
+		}
+	}
+	return result;
+}
+
+
+function strComper(a,b){
+	for(var i=0;i<b.length;i++){
+		if(a == b[i]){
+			return true;
+			break
+		}
+	}
+}
+/*运动*/
+function startMove(obj, oTargets, fnCallBack){
+	if(obj.timer){clearInterval(obj.timer);}
+	obj.timer=setInterval(function (){
+		doMove(obj, oTargets, fnCallBack);
+	}, 30);
+}
+
+function stopMove(obj){
+	if(obj.timer){clearInterval(obj.timer);}
+}
+
+function doMove(obj, oTargets, fnCallBack){
+	var iCur=0;
+	var attr='';
+	var bStop=true;	//这一次运动，是否停止了
+	for(attr in oTargets){
+		if(attr=='opacity'){
+			iCur=parseInt(parseFloat(css(obj, 'opacity'))*100);
+		}else{
+			iCur=parseInt(css(obj, attr));
+		}
+		
+		if(isNaN(iCur)){iCur=0;}
+		var iSpeed=(oTargets[attr]-iCur)/8;
+		iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+		iCur+=iSpeed
+
+		if(oTargets[attr]!=iCur){bStop=false;}
+		if(attr=='opacity'){
+			obj.style.filter='alpha(opacity:'+iCur+')';
+			obj.style.opacity=iCur/100;
+		}else{
+			obj.style[attr]=iCur+'px';
+		}
+	}
+	
+	if(bStop){
+		clearInterval(obj.timer);
+		obj.timer=null;
+		if(fnCallBack){fnCallBack();};
+	}
+}
+
+/*运动end*/
+/* form的参数是0~2 
+form={0:左右移动,1:上下移动,2:淡入淡出}
+布局要求：最外层一个div,给个id,大图是ul,按钮是ol。
+*/
+/* id,form,className */
+function picturesSwitch(srollId,iconId,className,form){
+	var oScroll=Q(srollId)[0];
+	var oIcon=Q(iconId)[0];
+	var oUl=getEle(oScroll,'ul')[0];
+	var aLi=getEle(oUl,'li');
+	var aBtn=getEle(oIcon,'span');
+	var i=0;
+	var last=null;
+	var iNow=0;
+	var t=null;
+	var w=aLi[0].offsetWidth;
+	var h=aLi[0].offsetHeight;
+
+	last=aBtn[0];
+
+	t=setInterval(autoPlay,3000);
+
+	oScroll.onmouseover=clearT;
+	oScroll.onmouseout=function(){
+		t=setInterval(autoPlay,3000);
+	};
+
+	switch(form){
+		case 0:
+			oUl.style.width=aLi.length*w+'px';
+			oUl.style.height=h+'px';
+			break;
+		case 1:
+			oUl.style.width=w+'px';
+			oUl.style.height=aLi.length*h+'px';
+			break;
+		case 2:
+			oUl.style.width=aLi.length*w+'px';
+			oUl.style.height=h+'px';
+			break;
+	}
+	function autoPlay(){
+		iNow++;
+		if(iNow==aBtn.length){
+			iNow=0;
+		}
+		tabs(iNow,form);
+	}
+	function clearT(){
+		if(t){
+			clearInterval(t);
+			t=null;
+		}
+	}
+	for (i=0;i<aBtn.length;i++){	
+		aBtn[i].bShow=true;
+		aBtn[i].index=i;
+		aBtn[i].onmouseover=function(){
+			iNow=this.index;
+			tabs(iNow,form);
+		};
+	}
+	function tabs(iNow,form){
+		if (last){
+			aBtn[last.index].className='';
+			last.bShow=true;
+		}
+		switch(form){
+			case 0:
+				startMove(oUl,{left:-iNow*w});
+				break;
+			case 1:
+				startMove(oUl,{top:-iNow*h});
+				break;
+			case 2:
+				oUl.style.left=-iNow*w+'px';
+				aLi[iNow].style.filter='alpha(opacity:'+0+')';
+				aLi[iNow].style.opacity=0/100;
+				startMove(aLi[iNow],{opacity:100});   
+				break;
+		}
+		aBtn[iNow].className=className;
+		aBtn[iNow].bShow=false;
+		last=aBtn[iNow];
+	}
+}
+function imgShow(){
+	var imgList = $('#scrollSmallImg img');
+	var pre = $('#leftBar');
+	var next = $('#rightBar');
+	var showImg = $('#bigImg');
+	var iNow = 0;
+	var focus = 3; /* 选中小图居左边的张数 */
+	var maxLeft = imgList.length-5;
+	var ul = $('#scrollSmallImg');
+	ul.css('width',imgList.length*81)
+	imgList.click(function(){
+		iNow = imgList.index($(this));
+		newImg(iNow);
+		ulMove(iNow);
+	});
+	function newImg(index){
+		var smallSrc=imgList.eq(index).attr('src');
+		var bigSrc = smallSrc.replace('62x45','492x660');	
+		var img = new Image();
+		showImg.hide();
+		$(img).load(function(){
+			showImg.fadeIn('slow');
+			showImg.attr('src',bigSrc);
+		}).attr('src',bigSrc);
+	};
+	newImg(0);
+	function ulMove(index){
+		var leftNum = index-focus;
+		leftNum = leftNum<0?0:leftNum;
+		leftNum = leftNum>maxLeft?maxLeft:leftNum;
+		if(maxLeft>0){
+			ul.stop(true).animate({left:-leftNum*81});
+		};
+		var li = imgList.eq(index).parent();
+		li.addClass('active').siblings().removeClass('active');
+	};
+	ulMove(0);
+	pre.click(function(){
+		iNow--;
+		iNow = iNow<0?0:iNow;
+		newImg(iNow);
+		ulMove(iNow);
+	});
+	next.click(function(){
+		iNow++;
+		iNow = iNow>(imgList.length-1)?(imgList.length-1):iNow;
+		newImg(iNow);
+		ulMove(iNow);
+	})
+
+}

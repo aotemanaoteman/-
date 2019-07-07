@@ -1,0 +1,1999 @@
+@charset "UTF-8";
+/**
+ * @authors wpp (you@example.org)
+ * @date    2016-12-20 14:58:56
+ * @version $Id$
+ */
+ /* 头部 */
+/*.headerWrapper{
+	background: #8a7051;
+}
+.header{
+	width: 1230px;
+	margin: 0 auto;
+	padding: 30px 0;
+	background: #8a7051;
+}
+.headerNav{
+	padding-top: 20px;
+}
+.headerNav li{
+	float: left;
+	font-size: 20px;
+	line-height: 56px;
+	margin-left: 50px;
+}
+.headerNav li a{
+	position: relative;
+	color: #e1d1b9;
+}
+.headerNav li a:hover{
+	color: #fff;
+	cursor: pointer;
+}
+.headerNav li a:hover:after{
+	position: absolute;
+	content:'';
+	width:100%;
+	height:3px;
+	background-color:#fff;
+	bottom:-47px;
+	left:0;
+}*/
+.tea-header {
+    width: 1420px;
+    margin: 0 auto;
+    height: 79px;
+    background-color: #89674c;
+}
+.wrapper {
+	width: 1220px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.tea-header .logo {
+    width: 92px;
+    height: 100%;
+    /*position: absolute;
+    top: 0;
+    left: 93px;*/
+}
+.tea-header .logo a {
+    display: block;
+    text-indent: -5000px;
+    width: 100%;
+    height: 100%;
+}
+.tea-header .logo a span {
+    display: none;
+}
+.tea-header .logo a img {
+    display: block;
+    width: 100%;
+    height: 42px;
+    position: relative;
+    top: 21px;
+    margin: 0 auto;
+}
+.tea-header .nav {
+    height: 76px;
+    padding-left: 170px;
+}
+.tea-header .nav .nav-item {
+    float: left;
+    height: 100%;
+    margin: 0 30px;
+}
+.tea-header .nav .nav-item>a {
+    font-size: 14px;
+    line-height: 78px;
+    color: #e1d1b9;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+.tea-header .nav .nav-item .nav-wrap {
+    width: 1420px;
+    position: absolute;
+    left: 50%;
+    margin-left: -710px;
+    z-index: 9999;
+    top: 100%;
+    height: 180px;
+    display: none;
+    background-color: #0c0e11;
+    text-align: center;
+    padding: 20px 0;
+}
+.tea-header .nav .nav-item a.active{
+	border-bottom:3px solid #fff;
+	color:#fff;
+}
+.tea-header .nav .nav-item>a.active,
+.tea-header .nav .nav-item>a:hover{
+	border-bottom:3px solid #fff;
+	color:#fff;
+}
+/* 首页导航 */
+.indexBannerWrapper{
+	position: relative;
+	z-index: 10;
+}
+.indexBanner{
+	width: 1230px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.bannerBar li{
+	float: left;
+	font-size: 14px;
+	line-height: 35px;
+	color: #676767;
+	margin-left: 25px;
+}
+.bannerBar li a{
+	padding-right: 25px;
+	color: #676767;
+}
+.bannerBar li i{
+	font-style: normal;
+	font-size: 14px;
+}
+.bannerBar li a:hover{
+	font-weight: bold;
+}
+.bannerBar li.active span{
+	font-weight: bold;
+	padding-right: 15px;
+}
+.goodsListWrapper{
+	position: absolute;
+	width: 100%;
+	padding-top: 36px;
+	background: #fff;
+	left: 0;
+	top: 50px;
+	display: none;
+	border-top: 1px solid #ccc;
+}
+.goodsListWrapper.active{
+	display: block;
+}
+.goodsListsPos{
+	width: 1230px;
+	margin: 0 auto;
+	text-align: center;
+}
+.goodsListsPos li{
+	float: left;
+	width: 206px;
+	margin-right: 0;
+}
+.imgBlock{
+	border-right: 1px solid #c9c9c9;
+}
+.goodsListsPos li:last-child .imgBlock{
+	border-right: none;
+}
+.goodsListWrapper li .imgBlock a,
+.goodsListWrapper li .imgBlock img{
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	padding-right: 0;
+}
+.goodsListsPos ul{
+	display: inline-block;
+}
+.goodsListsPos h3{
+	font-size: 18px;
+	line-height: 1em;
+	color: #000;
+	font-weight: normal;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	margin-top: 5px;
+}
+.goodsListsPos p{
+	font-size: 14px;
+	line-height: 1em;
+	color: #000;
+	font-weight: normal;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	margin-top: 20px;
+}
+.goodsListsPos b{
+	display: block;
+	font-size: 16px;
+	line-height: 1em;
+	color: #bd0000;
+	margin-top: 20px;
+}
+.searchPersonal{
+	position: absolute;
+	right: -8px;
+	top: 24px;
+	background:#89674c;
+}
+.searchBoxS{
+	width: 20px;
+	height: 20px;
+	padding: 4px 5px 4px 2px;
+	border: 1px solid #89674c;
+	/*margin-right: 10px;*/
+	overflow: hidden;
+}
+.searchBoxL{
+	width: 160px;
+	height: 20px;
+	padding: 4px 5px;
+	border: 1px solid #e1d1b9;
+	border-radius: 3px;
+	margin-right: 10px;
+	overflow: hidden;
+}
+.searchBoxS input,
+.searchBoxL input{
+	float: right;
+	width: 120px;
+	height: 20px;
+	line-height: 20px;
+	background: none;
+	border: none;
+	font-size: 14px;
+	color: #e1d1b9;
+}
+.searchBoxS input::-webkit-input-placeholder,
+.searchBoxL input::-webkit-input-placeholder{ /* WebKit browsers */
+	color:#e1d1b9;
+}
+.searchBoxS input:-moz-placeholder,
+.searchBoxL input:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+	color:#e1d1b9;
+}
+.searchBoxS input::-moz-placeholder,
+.searchBoxL input::-moz-placeholder{ /* Mozilla Firefox 19+ */
+	color:#e1d1b9;
+}
+.searchBoxS input:-ms-input-placeholder,
+.searchBoxL input:-ms-input-placeholder{ /* Internet Explorer 10+ */
+	color:#e1d1b9;
+}
+.searchBoxS .searchIcon,
+.searchBoxL .searchIcon{
+	float: right;
+	width: 20px;
+	height: 20px;
+	/*background: url('../image/searchIcon.png') 0 0 no-repeat;
+	background-size: contain;*/
+	background: url("../image/icon2x.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/icon2x.png*/ -50px 0 no-repeat;
+	background-size: 67px 43px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.line{
+	width: 1px;
+	height: 12px;
+	background: #b1977d;
+	margin: 9px 12px;
+}
+.personalBoxS{
+	width: 20px;
+	height: 20px;
+	padding: 5px 0 0 0;
+	overflow: hidden;
+}
+.personalBoxLT,
+.personalBoxLB{
+	width: 92px;
+	position: relative;
+	z-index: 20;
+}
+.personalBoxS .personalIcon{
+	float: left;
+	width: 20px;
+	height: 20px;
+	/*background: url('../image/personalIcon.png') 0 0 no-repeat;
+	background-size: contain;*/
+	background: url("../image/icon2x.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/icon2x.png*/ no-repeat;
+	background-size: 67px 43px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.personalBoxLT a,
+.personalBoxLB a{
+	display: block;
+	height: 19px;
+	line-height: 19px;
+	padding: 5px 10px 5px 15px;
+	font-size: 14px;
+	color: #e1d1b9;
+}
+.personalBoxLT a{
+	background: url("../image/dot-down.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/dot-down.png*/ right -38px no-repeat;
+}
+.personalBoxLB a{
+	background: url("../image/dot-down.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/dot-down.png*/ right 4px no-repeat;
+}
+.logoutBox{
+	position: absolute;
+	left: 14px;
+	top: 54px;
+	cursor: pointer;
+	background: #89674c;
+	display: none;
+}
+.logoutBox .logout{
+	width: 65px;
+	height:20px;
+	line-height: 20px;
+	color:#e1d1b9;
+	font-size: 14px;
+	padding: 5px 10px;
+	background: none;
+}
+.addShopcart{
+	margin-top: 7px;
+	margin-right: 20px;
+}
+.addShopcart a{
+	display: block;
+	width: 27px;
+	height: 20px;
+	background: url("../image/shopcart.jpg")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/shopcart.jpg*/ 0 0 no-repeat;
+	background-size: contain;
+}
+/* 主题 */
+.contentWrapper{
+	width: 1230px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+/* 轮播 */
+.scrollBox{
+	position: relative;
+}
+.scrollImg{
+	width: 1230px;
+	height: 624px;
+	overflow: hidden;
+	position: relative;
+}
+.scrollImg ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.scrollImg li{
+	float: left;
+	cursor: pointer;
+}
+.scrollImg img{
+	width: 1230px;
+	height: 624px;
+}
+.scrollIcon{
+	width: 1230px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	bottom: 62px;
+}
+.scrollIcon span{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border: 2px solid #8f9099;
+	margin: 0 5px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.scrollIcon span.active{
+	background: #8f9099;
+}
+.smallTea{
+	margin-top: 27px;
+}
+.smallTea img{
+	float: left;
+	width: 306px;
+	height: 203px;
+	/*border-radius: 5px;*/
+	margin-right: 2px;
+	cursor: pointer;
+}
+.smallTea img:last-child{
+	margin-right: 0;
+}
+/* 商品列表 */
+.goodsBox{
+	margin-top: 30px;
+}
+.goodsTit{
+	background: #fafafa;
+	height: 58px;
+	line-height: 58px;
+	padding: 0 45px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.goodsTit h2{
+	font-size: 24px;
+	color: #929292;
+	font-weight: normal;
+}
+.goodsDetailImg p img{
+	width:100%;
+}
+.goodsList ul{
+	background: #fff;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top:1px solid #ededed;
+}
+.goodsList li{
+	float: left;
+	width: 306px;
+	height: 346px;
+	text-align: center;
+	padding: 60px 0 30px;
+	border-right:1px solid #ededed;
+}
+.goodsList ul li:last-child{
+	border-right:none;
+}
+.goodsList li img{
+	margin: 0 auto;
+	width: 230px;
+	height: 230px;
+	cursor: pointer;
+}
+.goodsList .goodsName{
+	display: block;
+	margin-top: 23px;
+	font-size: 16px;
+	color: #000;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.goodsList .goodsTips{
+	display: block;
+	font-size: 14px;
+	margin-top: 10px;
+	color: #000;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.goodsList .teaPrice{
+	font-size: 18px;
+	color: #bd0000;
+	margin-top: 23px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.goodsList .oneColItemL,
+.goodsList .twoColItem{
+	padding: 0;
+}
+.goodsList .twoColItem{
+	width: 613px;
+	height: 436px;
+}
+.goodsList .oneColItemL{
+	width: 307px;
+	height: 436px;
+}
+.goodsList .twoColItem img{
+	width: 613px;
+	height: 436px;
+}
+.goodsList .oneColItemL img{
+	width: 307px;
+	height: 436px;
+}
+.video{
+	width: 603px;
+	height: 412px;
+	background: #000;
+}
+.dynamic{
+	/*width: 614px;*/
+	padding: 28px 0;
+}
+.dynamic img{
+	float: left;
+	width: 307px;
+	height: 204px;
+	/*-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;*/
+	cursor: pointer;
+}
+/* 商品就加入购物车 */
+.shopcartBox{
+	padding: 67px 77px 94px;
+	background: #fff;
+}
+.scrollGoods{
+	width: 469px;
+	height: 451px;
+	/*border: 1px solid #8f9099;*/
+}
+.scrollGoods img{
+	width: 100%;
+	height: 100%;
+}
+.leftRightScroll{
+	margin-top: 45px;
+}
+.leftBar,
+.rightBar{
+	width: 28px;
+	height: 72px;
+	line-height: 72px;
+	font-size: 70px;
+	color: #a2a2a2;
+	text-align: left;
+	margin-right: 15px;
+}
+.rightBar{
+	margin-right: 0;
+	margin-left: 9px;
+}
+.leftBar:hover,
+.rightBar:hover{
+	color: #666;
+}
+.scrollSmallGoods{
+	width: 395px;
+	height: 72px;
+	overflow: hidden;
+	position: relative;
+}
+.scrollSmallGoods ul{
+	position: absolute;
+	height: 72px;
+	left: 0;
+	top: 0;
+}
+.scrollSmallGoods li{
+	float: left;
+	width: 72px;
+	height: 72px;
+	margin-right: 8px;
+}
+.scrollSmallGoods li.active{
+	width: 70px;
+	height: 70px;
+	border: 1px solid #8f9099;
+}
+.scrollSmallGoods li img{
+	width: 100%;
+	height: 100%;
+}
+.goodsDetail{
+	width: 455px;
+	min-height: 570px;
+	padding-left: 72px;
+	border-left: 1px solid #d1d4ec;
+}
+.goodsDetail h2{
+	line-height: 38px;
+	font-size: 30px;
+	color: #676767;
+}
+.goodsDetail .goodsPrice{
+	font-size: 30px;
+	color: #cd4f4f;
+	margin-top: 15px;
+}
+.buyNum{
+	padding: 21px 0;
+	border-bottom: 1px solid #d1d4ec; 
+}
+.buyNum .buyNumTit{
+	line-height: 32px;
+	font-size: 20px;
+	color: #676767;
+	margin-right: 24px;
+}
+.buyNum .addNum a{
+	float: left;
+	width: 52px;
+	height: 32px;
+	line-height: 32px;
+	background: #8f9099;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+}
+.buyNum .addNum input{
+	float: left;
+	width: 38px;
+	height: 22px;
+	background: #8f9099;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	padding: 5px;
+	margin: 0 1px;
+	border: none;
+}
+.action{
+	padding: 28px 0;
+}
+.action .addShopCart{
+	float: left;
+	width: 180px;
+	height: 47px;
+	line-height: 47px;
+	text-align: center;
+	font-size: 20px;
+	color: #676767;
+	border: 1px solid #8f9099;
+	margin-right: 33px;
+}
+.skuChoose{
+	font-style:normal;
+	display: inline-block;
+	margin:10px 0;
+}
+.pinfosku{
+	width: 100px;
+	height: 47px;
+	line-height: 47px;
+	text-align: center;
+	font-size: 20px;
+	color: #676767;
+	border: 1px solid #8f9099;
+	margin-right: 33px;
+	padding: 5px;
+}
+.pinfosku.active{
+	color: red;
+	border: 1px solid red;
+}
+.action .addShopCart:hover{
+	border: 1px solid #cd4f4f;
+}
+.goodsMsg{
+	border-top: 1px solid #d1d4ec; 
+}
+.goodsMsg li{
+	line-height: 50px;
+	font-size: 18px;
+	color: #676767;
+	border-bottom: 1px solid #d1d4ec;
+}
+.goodsMsg li span{
+	display: inline-block;
+	width: 49%;
+}
+.buyTel{
+	margin-top: 30px;
+	font-size: 30px;
+	color: #cd4f4f;
+	padding: 0 10px;
+	font-family: '微软雅黑';
+}
+.buyTel em{
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url("../image/telIcon.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/telIcon.png*/ 0 0 no-repeat;
+	margin-right: 10px;
+}
+.goodsDetailImg{
+	width: 1230px;
+	margin-bottom: 4px;
+}
+/* 购物车列表 */
+.shopcartWrapper{
+	min-height: 850px;
+}
+.shopcartListBox,
+.selectAllWrapper,
+.shopcartGoodsBox{
+	border-bottom: 1px solid #c9c9c9;
+}
+.allGoods{
+	width: 1230px;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+.allGoods h2{
+	line-height: 32px;
+	font-size: 20px;
+	color: #9d6d4a;
+	font-weight: normal;
+	padding-left: 15px;
+}
+.shopcartListTitBox{
+	background: #fff;
+}
+.shopcartListTit{
+	width: 1230px;
+	margin: 0 auto;
+	background: #fff;
+}
+.shopcartListTit table,
+.allGoods table{
+	width: 100%;
+}
+.shopcartListTit th{
+	font-weight: normal;
+	font-size: 16px;
+	height: 53px;
+	color: #9d6d4a;
+	padding: 0 15px;
+}
+.allGoods td{
+	padding: 30px 15px;
+	text-align: center;
+}
+.goodsNews input{
+	float: left;
+	margin-top: 10px;
+	margin-right: 23px;
+}
+.goodsNews img{
+	width: 120px;
+	height: 120px;
+	border: 1px solid #9d6d4a;
+}
+.goodsDet{
+	width: 410px;
+	margin-left: 38px;
+}
+.goodsDet h3{
+	font-size: 22px;
+	font-weight: normal;
+	margin-top: 9px;
+	text-align: left;
+}
+.goodsDet h3 a{
+	color: #9d6d4a;
+}
+.goodsDet p{
+	font-size: 16px;
+	color: #8f9099;
+	text-align: left;
+	margin-top: 23px;
+}
+.allGoods td .unitPrice,
+.allOrders td .unitPrice{
+	font-size: 16px;
+	color: #8f9099;
+}
+.allGoods td .subtotal,
+.allOrders td .subtotal{
+	font-size: 16px;
+	color: #9d6d4a;
+	font-weight: bold;
+}
+.allGoods td .deleteGoodsBtn{
+	font-size: 16px;
+	color: #8f9099;
+}
+.goodsNum a{
+	float: left;
+	width: 38px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 16px;
+	color: #fff;
+	background: #8f9099;
+	text-align: center;
+}
+.goodsNum input{
+	float: left;
+	width: 35px;
+	height: 20px;
+	line-height: 20px;
+	padding: 2px;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	margin: 0 1px;
+	background: #8f9099;
+	text-align: center;
+}
+.settlementBox{
+	width: 1230px;
+	margin: 0 auto;
+}
+.settlementBox table{
+	width: 100%;
+}
+.settlementBox td{
+	padding: 36px 15px;
+	font-size: 16px;
+	color: #8f9099;
+}
+.settlementBox input{
+	margin-right: 23px;
+}
+.settlementBox .selectAllBtn{
+	margin-left: 20px;
+	color: #8f9099;
+}
+.goSettle span{
+	margin-right: 20px;
+}
+.goSettle b{
+	color: #9d6d4a;
+}
+.goSettle .settleBtn{
+	display: inline-block;
+	width: 102px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	background: #9d6d4a;
+	text-align: center;
+}
+/* 加入购物车 */
+.successAddBox{
+	width: 1230px;
+	margin: 0 auto;
+	padding: 180px 0 75px;
+	text-align: center;
+}
+.successAddBox cite{
+	display: inline-block;
+	width: 73px;
+	height: 73px;
+	border: 4px solid #9d6d4a;
+	border-radius: 50%;
+	position: relative;
+	vertical-align: middle;
+}
+.successAddBox .successIcon:before{
+	position: absolute;
+	content: '';
+	width: 20px;
+	height: 4px;
+	background: #9d6d4a;
+	left: 16px;
+	top: 40px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+.successAddBox .successIcon:after{
+	position: absolute;
+	content: '';
+	width: 32px;
+	height: 4px;
+	right: 14px;
+	top: 37px;
+	background: #9d6d4a;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+}
+.successAddBox span{
+	font-size: 52px;
+	color: #9d6d4a;
+	margin-left: 38px;
+	vertical-align: middle;
+	font-family: '微软雅黑';
+}
+.settleGoods{
+	width: 1230px;
+	margin: 0 auto;
+}
+.settleGoods table{
+	width: 100%;
+}
+.settleGoods td{
+	padding: 82px 0;
+}
+.shopcartsBtn{
+	margin-top: 73px;
+}
+.shopcartsBtn a{
+	display: inline-block;
+	height: 42px;
+	line-height: 42px;
+	padding: 0 30px;
+	font-size: 20px;
+	margin-left: 20px;
+	border: 1px solid #9d6d4a;
+}
+.shopcartsBtn a.findDetail{
+	color: #9d6d4a;
+}
+.shopcartsBtn a.goShopCart{
+	color: #fff;
+	background: #9d6d4a;
+}
+.shopcartsBtn a i{
+	font-style: normal;
+	font-family: '黑体';
+	margin-left: 10px;
+}
+.buyNumber{
+	margin-top: 40px;
+}
+.buyNumber span{
+	line-height: 24px;
+	font-size: 20px;
+	color: #676767;
+	margin-right: 15px;
+}
+.youCanDo{
+	width: 1230px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 20px;
+	color: #8f9099;
+}
+.youCanDo a{
+	color: #9d6d4a;
+	margin-right: 25px;
+}
+.successAddBox .failIcon:before{
+	position: absolute;
+	content: '';
+	width: 40px;
+	height: 4px;
+	left: 16px;
+	top: 35px;
+	background: #9d6d4a;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+.successAddBox .failIcon:after{
+	position: absolute;
+	content: '';
+	width: 40px;
+	height: 4px;
+	right: 16px;
+	top: 35px;
+	background: #9d6d4a;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+}
+/* 支付方式 */
+.fillOrCheckBox{
+	background: #fff;
+}
+.fillOrCheck{
+	width: 1230px;
+	margin: 0 auto;
+	background: #fff;
+	line-height: 58px;
+}
+.fillOrCheck h2{
+	font-size: 20px;
+	color: #9d6d4a;
+	font-weight: normal;
+}
+.paymentWrapper{
+	background: #ededed;
+	border-bottom: 1px solid #c9c9c9;
+}
+.paymentWrapper.lastChild{
+	border-bottom: none;
+}
+.paymentBox{
+	width: 1230px;
+	margin: 0 auto;
+}
+.paymentTit{
+	padding: 16px 0;
+	line-height: 36px;
+}
+.paymentTit h2{
+	font-size: 22px;
+	color: #9d6d4a;
+	font-weight: normal;
+}
+.paymentTit .addAddressBtn{
+	font-size: 14px;
+	color: #9d6d4a;
+}
+.receive{
+	padding: 14px 0 40px;
+}
+.slectReceive{
+	padding: 0 38px;
+	font-size: 19px;
+	color: #8f9099;
+	line-height: 40px;
+	font-family: '微软雅黑';
+}
+.slectReceive.active{
+	border: 1px solid #9d6d4a;
+	position: relative;
+}
+.slectReceive i,
+.paymentBtnsBox span.active i,
+.invDefaultAddr i,
+.editInvoice .active i,
+.invoiceelect.active i{
+	position: absolute;
+	width: 14px;
+	height: 19px;
+	right: 0;
+	bottom: 0;
+	background: url("../image/checkIcon.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/checkIcon.png*/ 0 0 no-repeat;
+}
+.detailAddr{
+	font-size: 19px;
+	color: #8f9099;
+	line-height: 42px;
+	margin-left: 22px;
+	font-family: '微软雅黑';
+}
+.detailAddr span{
+	margin-right: 10px;
+}
+.moreAddress{
+	padding-bottom: 17px;
+}
+.moreAddress a{
+	font-size: 14px;
+	color: #8f9099;
+}
+.moreAddress a i{
+	display: inline-block;
+	font-style: normal;
+	font-size: 12px;
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+}
+.paymentBtnsBox{
+	padding: 14px 0 40px
+}
+.paymentBtnsBox span{
+	float: left;
+	line-height: 40px;
+	font-size: 19px;
+	color: #8f9099;
+	padding: 0 38px;
+	border: 1px solid #8f9099;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.paymentBtnsBox span i{
+	display: none;
+}
+.paymentBtnsBox span.active{
+	position: relative;
+	border: 1px solid #9d6d4a;
+}
+.paymentBtnsBox span.active i{
+	display: block;
+}
+.allOrders{
+	padding-bottom: 14px;
+}
+.allOrders table{
+	width: 100%;
+}
+.allOrders td{
+	padding: 14px 0;
+	text-align: center;
+}
+.addRemark{
+	padding-bottom: 30px;
+	text-align: left;
+}
+.addRemark span{
+	display: inline-block;
+	line-height: 30px;
+	font-size: 14px;
+	color: #8f9099;
+	margin-right: 15px;
+}
+.addRemark input{
+	width: 403px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 14px;
+	border: 1px solid #8f9099;
+	padding: 5px
+}
+.invoice{
+	line-height: 34px;
+	font-size: 16px;
+}
+.invoice span{
+	color: #8f9099;
+	margin-right: 15px;
+}
+.invoice a{
+	color: #9d6d4a;
+}
+.totalMoney{
+	width: 1230px;
+	margin: 70px auto 0;
+	text-align: right;
+	line-height: 28px;
+	font-size: 14px;
+	color: #8f9099;
+}
+.totalMoney b{
+	font-size: 18px;
+	color: #9d6d4a;
+}
+.mailAddress span{
+	margin-left: 10px;
+} 
+.settleBtn{
+	width: 1230px;
+	margin: 22px auto 0;
+	text-align: right;
+}
+.settleBtn input{
+	width: 134px;
+	height: 46px;
+	background: #9d6d4a;
+	border: none;
+	font-size: 19px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #fff;
+}
+.w_addressLists{
+	padding-bottom: 17px;
+	display: none;
+}
+.w_addressLists dd{
+	font-size: 19px;
+    color: #8f9099;
+    line-height: 42px;
+    font-family: '微软雅黑';
+    cursor: pointer;
+}
+.w_addressLists dd span{
+	margin-right: 10px;
+}
+/* 支付方式 */
+.orderSettlementBox{
+	background: #fff;
+}
+.orderSettlement{
+	width: 1230px;
+	margin: 0 auto;
+	padding: 15px 0 12px;
+	background: #fff;
+}
+.orderStyle,
+.orderTotalMoney{
+	line-height: 25px;
+}
+.orderStyle p{
+	font-size: 14px;
+	color: #9d6d4a;
+}
+.orderStyle span{
+	font-size: 12px;
+	color: #8f9099;
+}
+.orderStyle i{
+	font-style: normal;
+	color: #9d6d4a;
+}
+.orderTotalMoney{
+	text-align: right;
+}
+.orderTotalMoney p{
+	font-size: 14px;
+	color: #8f9099;
+}
+.orderTotalMoney b{
+	font-size: 16px;
+	color: #9d6d4a;
+}
+.orderTotalMoney a{
+	color: #9d6d4a;
+	font-size: 12px;
+}
+.payWxZfbBox{
+	width: 1230px;
+	margin: 33px auto 0;
+}
+.payWxZfb{
+	padding: 25px 28px 33px;
+	border: 2px solid #9d6d4a;
+}
+.payTit{
+	font-size: 22px;
+	color: #9d6d4a;
+	line-height: 38px;
+}
+.payTit h2{
+	font-weight: normal;
+}
+.wxOrZfbBox{
+	width: 780px;
+	margin-left: 250px;
+	margin-top: -33px;
+}
+.overTime{
+	font-size: 12px;
+	color: #8f9099;
+	line-height: 33px;
+}
+.overTime i{
+	font-style: normal;
+	color: #9d6d4a;
+}
+.wxOrZfb{
+	margin-top: 34px;
+}
+.twoCode{
+	width: 270px;
+}
+.twoCode img{
+	width: 270px;
+	height: 270px;
+}
+.sweep{
+	padding: 8px 0 8px 50px;
+	background: #9d6d4a;
+	margin-top: 23px;
+}
+.sweep cite{
+	width: 36px;
+	height: 35px;
+	background: url("../image/scanCodeIcon.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/scanCodeIcon.png*/ 0 0 no-repeat;
+}
+.scanCode{
+	margin-left: 20px;
+}
+.scanCode p{
+	font-size: 14px;
+	color: #fff;
+	margin-top: 8px;
+}
+.scanCode p:first-child{
+	margin-top: 0;
+}
+.settleBox{
+	width: 368px;
+}
+.elsePay{
+	margin-top: 50px;
+	color: #9d6d4a;
+}
+.elsePay a{
+	font-size: 14px;
+	color: #9d6d4a;
+}
+.elsePay i{
+	font-style: normal;
+	margin-right: 15px;
+	font-family: '黑体';
+	font-size: 16px;
+}
+.zfbPay p{
+	font-size: 19px;
+	color: #9d6d4a;
+	margin-bottom: 15px;
+}
+.zfbPay .zfbAccount{
+	display: block;
+	width: 345px;
+	height: 45px;
+	padding: 10px;
+	font-size: 20px;
+	border: 1px solid #9d6d4a;
+	background: none;
+	margin-bottom: 30px;
+}
+.zfbPassword{
+	padding: 12px 10px;
+	border: 1px solid #9d6d4a;
+}
+.zfbPassword input{
+	float: left;
+	width: 56px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+	background: none;
+	border: none;
+	border-left: 1px solid #c8b1a1;
+}
+.zfbPassword input:first-child{
+	border-left: none;
+}
+.surePay{
+	display: block;
+	width: 268px;
+	height: 53px;
+	margin-top: 52px;
+	font-size: 26px;
+	color: #fff;
+	background: #9d6d4a;
+	border: none;
+	cursor: pointer;
+}
+.payPlatformWrapper{
+	border-bottom: 1px solid #c9c9c9;
+	padding: 38px 0 73px;
+}
+.payPlatformBox{
+	width: 1168px;
+	border: 1px solid #9d6d4a;
+	padding: 30px;
+	margin: 0 auto;
+}
+.defaultBankCard input{
+	width: 16px;
+	height: 16px;
+	margin-top: 10px;
+	margin-right: 27px;
+}
+.defaultCardMsg{
+	font-size: 22px;
+	color: #9d6d4a;
+	line-height: 35px;
+}
+.defaultCardMsg span{
+	margin-right: 50px;
+}
+.defaultCardMsg span i{
+	display: inline-block;
+	width: 29px;
+	height: 30px;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.defaultCardMsg span i.jsCardIcon{
+	background: url("../image/jsCardIcon.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/jsCardIcon.png*/ 0 0 no-repeat;
+}
+.defaultCardMsg cite{
+	font-size: 14px;
+	color: #8f9099;
+	font-style: normal;
+}
+.defaultCardMsg cite em{
+	display: inline-block;
+	padding: 0 8px;
+	line-height: 21px;
+	background: #9d6d4a;
+	border-radius: 3px;
+	font-style: normal;
+	color: #fff;
+	margin-right: 10px;
+}
+.addNewCard{
+	margin-left: 129px;
+}
+.addNewCard a{
+	display: block;
+	width: 143px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	border: 1px solid #9d6d4a;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #9d6d4a;
+}
+.payTotalMoney{
+	line-height: 35px;
+	font-size: 16px;
+	color: #8f9099;
+}
+.payTotalMoney b{
+	font-size: 18px;
+	color: #9d6d4a;
+}
+.payBtns{
+	width: 1230px;
+	margin: 80px auto 0;
+}
+.payBtns input{
+	display: block;
+	padding: 0 72px;
+	line-height: 60px;
+	background: #9d6d4a;
+	cursor: pointer;
+	font-size: 22px;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+}
+.choosePay{
+	margin-top: 57px;
+}
+.chooseBank{
+	font-size: 14px;
+	color: #8f9099;
+}
+.addCardMsg{
+	overflow: hidden;
+}
+.addCardMsg dt{
+	float: left;
+	width: 87px;
+	line-height: 42px;
+	font-size: 19px;
+	color: #8f9099;
+	margin-top: 22px;
+}
+.addCardMsg dd{
+	height: 42px;
+	line-height: 42px;
+	margin-left: 97px;
+	margin-top: 22px;
+}
+.cardNameBox{
+	display: inline-block;
+	width: 418px;
+	line-height: 34px;
+	position: relative;
+	border: 1px solid #9d6d4a;
+	padding: 7px 33px;
+	top: -4px;
+	vertical-align: middle;
+}
+.cardNameBox span{
+	display: inline-block;
+	width: 280px;
+	font-size: 22px;
+	color: #9d6d4a;
+}
+.cardNameBox span i{
+	display: inline-block;
+	width: 35px;
+	height: 34px;
+	background: url("../image/gsCardIcon.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/gsCardIcon.png*/ 0 0 no-repeat;
+	font-style: normal;
+	margin-right: 17px;
+}
+.cardNameBox cite{
+	font-style: normal;
+	font-size: 14px;
+	color: #8f9099;
+}
+.addCardMsg a{
+	display: inline-block;
+	font-size: 19px;
+	color: #8f9099;
+	vertical-align: middle;
+	margin-left: 42px;
+}
+.addCardMsg input[type='radio']{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+.addCardMsg label{
+	display: inline-block;
+	line-height: 42px;
+	vertical-align: middle;
+}
+/* 尾部 */
+.footerWrapper{
+	border-top: 1px solid #9d6d4a;
+	margin-top: 45px;
+}
+.footer{
+	width: 1230px;
+	margin: -1px auto 0;
+	padding: 38px 0;
+	border-top: 1px solid #9d6d4a;
+}
+.toEnsure img{
+	float: left;
+	margin-right: 167px;
+}
+.toEnsure img:last-child{
+	margin-right: 0;
+}
+.toEnsure span{
+	float: left;
+	font-size: 18px;
+	color: #9d6d4a;
+	margin-left: -162px;
+	margin-right: 167px;
+	margin-top: 3px;
+}
+.footerNav{
+	margin-top: 30px;
+}
+.footerNav li{
+	float: left;
+	font-size: 14px;
+	border-right: 1px solid #9d6d4a;
+	padding-right: 20px;
+	margin-right: 20px
+}
+.footerNav li:last-child{
+	border-right: none;
+	padding-right: 0;
+	margin-right: 0;
+}
+.footerNav li a{
+	color: #9d6d4a;
+}
+.weixin{
+	width: 400px;
+	background: #fff;
+	padding: 30px;
+	text-align: center;
+	color: #000;
+}
+.weixin img{
+	margin: 0 auto 10px;
+}
+/* 浮层 */
+.alertBox{
+	position: absolute;
+	padding: 4px;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.3);
+	z-index:100;
+	display: none;
+}
+.deleteBox{
+	width: 535px;
+}
+.alertTit{
+	height: 47px;
+	line-height: 47px;
+	padding: 0 28px;
+	color: #fff;
+	background: #9d6d4a;
+	position: relative;
+}
+.alertTit h3{
+	font-size: 18px;
+	color: #fff;
+	font-weight: normal;
+}
+.alertTit .alertCloseBtn{
+	position: absolute;
+	right: 28px;
+	top: 15px;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+}
+.alertTit .alertCloseBtn:before{
+	position: absolute;
+	left: 8px;
+	top: -2px;
+	content: '';
+	width: 1px;
+	height: 20px;
+	background: #fff;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+}
+.alertTit .alertCloseBtn:after{
+	position: absolute;
+	right: 8px;
+	top: -2px;
+	content: '';
+	width: 1px;
+	height: 20px;
+	background: #fff;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+}
+.deleteGoodsBox{
+	padding: 42px 57px 37px;
+	background: #fff;
+}
+.isOrNotDelete cite{
+	display: inline-block;
+	width: 75px;
+	height: 68px;
+	background: url("../image/deleteIcon.png")/*tpa=https://teastore.xiaoguantea.com/datas/tea/www/image/deleteIcon.png*/ 0 0 no-repeat;
+	vertical-align: middle;
+}
+.isOrNotDelete span{
+	font-size: 24px;
+	color: #9d6d4a;
+	margin-left: 20px;
+	font-weight: bold;
+}
+.deleteBtnBox{
+	text-align: right;
+	margin-top: 33px;
+}
+.deleteBtnBox a{
+	display: inline-block;
+	width: 143px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	background: #9d6d4a;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 5px;
+}
+.invoiceMsgBox{
+	width: 696px;
+}
+.invoiceMsg{
+	padding: 34px 95px;
+	background: #fff;
+}
+.invDefaultAddr{
+	display: inline-block;
+	line-height: 32px;
+	padding: 0 35px;
+	font-size: 14px;
+	color: #8f9099;
+	border: 1px solid #9d6d4a;
+	position: relative;
+}
+.editInvoice{
+	overflow: hidden;
+}
+.editInvoice dt{
+	float: left;
+	width: 84px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #8f9099;
+	margin-top: 43px;
+}
+.editInvoice dd{
+	margin-left: 84px;
+	margin-top: 43px;
+}
+.personlInv{
+	width: 212px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	color: #9d6d4a; 
+	padding: 0 10px;
+	border: 1px solid #8f9099;
+	margin-bottom: 7px;
+	cursor: pointer;
+}
+.editInvoice dd .editInvoiceTit{
+	width: 212px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	color: #9d6d4a; 
+	padding: 0 10px;
+	border: 1px solid #8f9099;
+	margin-bottom: 7px;
+}
+.editInvoice .active{
+	position: relative;
+	border: 1px solid #9d6d4a;
+	color: #8f9099;
+}
+.addCompanyInv{
+	display: inline-block;
+	line-height: 34px;
+	font-size: 14px;
+	color: #9d6d4a;
+	cursor: pointer;
+}
+.saveCompanyInv{
+	width: 212px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	color: #9d6d4a; 
+	padding: 0 10px;
+	border: 1px solid #9d6d4a;
+	margin-bottom: 7px;
+}
+.saveCompanyInv input{
+	float: left;
+	width: 170px;
+	height: 32px;
+	border: none;
+}
+.saveCompanyInv .saveComInvBtn{
+	float: right;
+	font-size: 16px;
+	color: #9d6d4a;
+	cursor: pointer;
+}
+.invoiceSelect{
+	float: left;
+	padding: 0 15px;
+	line-height: 32px;
+	font-size: 14px;
+	color: #8f9099;
+	border: 1px solid #8f9099;
+	cursor: pointer;
+	margin-right: 7px;
+}
+.invoiceelect.active{
+	border: 1px solid #9d6d4a;
+	position: relative;
+}
+.invoiceBtns{
+	padding-left: 84px;
+	margin-top: 55px;
+}
+.saveInvBtn,
+.saveAddrBtn input{
+	display: inline-block;
+	line-height: 25px;
+	padding: 0 15px;
+	font-size: 16px;
+	border: 1px solid #9d6d4a;
+	background: #9d6d4a;
+	border-radius: 3px;
+	color: #fff;
+	margin-right: 20px;
+}
+.cancelInvBtn{
+	display: inline-block;
+	line-height: 25px;
+	padding: 0 15px;
+	font-size: 16px;
+	border: 1px solid #9d6d4a;
+	border-radius: 3px;
+	color: #9d6d4a;
+	margin-right: 20px;
+}
+.addReciveBox{
+	width: 716px;
+}
+.addRecive{
+	padding: 13px 9px 45px;
+	background: #fff;
+}
+.addReciveList{
+	overflow: hidden;
+}
+.addReciveList dt{
+	float: left;
+	width: 115px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #8f9099;
+	text-align: right;
+	margin-top: 17px;
+}
+.addReciveList dt i{
+	font-style: normal;
+	font-size: 12px;
+	color: #a98268;
+}
+.addReciveList dd{
+	margin-left: 115px;
+	margin-top: 18px;
+}
+.addReciveList input{
+	width: 161px;
+	height: 20px;
+	line-height: 20px;
+	padding: 3px 5px;
+	font-size: 14px;
+	border: 1px solid #8f9099;
+}
+.addReciveList .detailAddrTxt{
+	width: 311px;
+}
+.addReciveList dd span{
+	display: inline-block;
+	width: 115px;
+	line-height: 28px;
+	font-size: 14px;
+	color: #8f9099;
+	text-align: right; 
+}
+.addReciveList select{
+	width: 140px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.emailTips{
+	font-size: 14px;
+	color: #8f9099;
+	margin-top: 12px;
+}
+.saveAddrBtn{
+	margin-top: 36px;
+	padding-left: 115px;
+}
+.saveAddrBtn input{
+	cursor: pointer;
+}
+.verificationCodeBox{
+	width: 546px;
+}
+.verificationCode{
+	padding-top: 30px;
+	background: #fff;
+	text-align: center;
+}
+.verificationCode h3{
+	font-size: 19px;
+	color: #9d6d4a;
+	font-weight: normal;
+}
+.verificationCode p{
+	font-size: 12px;
+	color: #8f9099;
+	margin-top: 15px;
+}
+.enterThisCode{
+	margin-top: 23px;
+}
+.enterThisCode input{
+	width: 240px;
+	height: 27px;
+	line-height: 27px;
+	border: 1px solid #9d6d4a;
+	font-size: 18px;
+	padding: 10px;
+}
+.enterThisCode a{
+	display: inline-block;
+	line-height: 49px;
+	font-size: 14px;
+	color: #9d6d4a;
+	margin-left: 15px;
+}
+.isOrNotClose{
+	line-height: 27px;
+	padding: 20px 0;
+	border-top: 1px solid #bdbec2;
+	margin-top: 19px;
+	color: #8f9099;
+}
+.isOrNotClose .Resend{
+	width: 331px;
+	border-right: 1px solid #8f9099;
+}
+.isOrNotClose .closePayBtn{
+	width: 214px;
+}
+.closePayBtn a{
+	color: #8f9099;
+}
+.pages{
+	margin-bottom: 30px;
+	text-align: right;
+}
+.totalPage{
+	font-size: 14px;
+	color: #868686;
+	line-height: 24px;
+	padding: 0 5px;
+	border-right: 1px solid #a6a6a6;
+}
+.pageItem{
+	display: inline-block;
+	vertical-align: middle;
+}
+.pageItem a{
+	float: left;
+	padding: 5px 8px;
+	border: 1px solid #c6c6c6;
+	color: #c4c2c3;
+	margin-left: 2px;
+}
+.pageItem a:hover,
+.pageItem a.active{
+	color: #fff;
+	background: #898989;
+	cursor:pointer;
+}
+.pageItem .prePage{
+	padding: 5px 8px 5px 23px;
+	color: #000;
+	position: relative;
+}
+.pageItem .nextPage{
+	padding: 5px 23px 5px 8px;
+	color: #000;
+	position: relative;
+}
+.pageItem .prePage:before{
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	border-right: 4px solid #000;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	left: 7px;
+	top: 8px;
+}
+.pageItem .nextPage:before{
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	border-left: 4px solid #000;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	right: 7px;
+	top: 8px;
+}
+.addReciveList dd .commonAlert{
+    font-size:14px;
+    color:#f00;
+    margin-left:10px;
+    line-height: 24px;
+}
+
+.tools-bar {
+	position: fixed;
+	height: 54px;
+	top: 50%;
+	margin-top: -30px;
+	right: 10px;
+	z-index: 9999;
+}
+.tools-bar .nav {
+	width: 54px;
+}
+.tools-bar .nav a {
+	background: no-repeat;
+	margin-top: 0px;
+	width: 54px;
+	height: 62px;
+	display: block;
+}
+.tools-bar .nav a.guanzhuweixin:hover {
+	background-position: 0 0;
+}
+.tools-bar .nav a.guanzhuweixin {
+	background-position: -50px 0;
+}
+.tools-bar .nav a.zixunkefu:hover {
+	background-position: 0 -60px;
+}
+.tools-bar .nav a.zixunkefu {
+	background-position: -50px -60px;
+}
+.tools-bar .nav-content {
+	position: absolute;
+	width: 168px;
+	height: 236px;
+	right: 48px;
+	top: 0px;
+	display: none;
+}
+.tools-bar .nav-content .customer-qrcode {
+	width: 161px;
+	height: 236px;
+}
+.tools-bar .nav-content1 {
+	position: absolute;
+	width: 168px;
+	height: 236px;
+	right: 47px;
+	top: 0px;
+	display: none;
+}
+.tools-bar .nav-content1 .customer-qrcode1 {
+	width: 161px;
+	height: 236px;
+}

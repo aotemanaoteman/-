@@ -1,0 +1,106 @@
+/* 去除所有边距 */
+*{margin:0;padding:0;
+box-sizing: border-box;}
+/* body */
+body{
+    background-color: #000000;
+}
+/* 顶部div */
+.tea-header{
+    height: 79px;
+    background-color: #89674c;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+/* 导航栏in小罐茶 */
+/* .wrapper{
+    margin:0 auto;
+    height: 100%;
+    position: relative;
+} */
+/* logo大小位置 */
+.tea-img{
+    width: 92px;
+    height: 42px;
+    margin-left:100px;
+    margin-top:20px;
+    float: left;
+}
+/* 头部导航栏字体设置 */
+.tea-header .nav{
+    float: left;
+    margin-left: 100px;
+
+}
+.tea-header .nav .nav-item{
+    display: block;
+    margin:0 15px;
+    width: 80px;
+
+    float: left;
+    padding-top: 30px;
+    
+    
+}
+.breadcrumb li a{
+    text-decoration:none; 
+    color:#e1d1b9;
+    font-size: 14px;
+}
+/* 轮播图的高 */
+.take{
+    height:730px;
+    background:#e1d1b9;
+}
+.take div{
+    height: 730px;
+}
+/* 中间div */
+.section{
+    height: 465px;
+}
+.form-inline .col-lg-4 .img_a{
+    position: relative;
+}
+.img_a{
+ position: absolute;
+}
+.card{
+    bottom:14rem;
+    left: 6rem;
+}
+.card p{
+    color:#CCAC82;
+}
+.card:hover{
+    color:#916F53;
+}
+.hr{
+    color: #ffffff;
+}
+/* footer面包屑 */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "|";
+}
+.breadcrumb-item{
+   color:#916F53
+}
+.breadcrumb{
+    justify-content: space-around;
+    background:rgba(0, 0, 0,0)
+}
+.progress-bar{
+    background-color:rgba(0, 0, 0,0);
+}
+  /* background-color: #007bff; */
+  .ft_text_1{
+      font-size: 12px;
+      color: #89674c
+  }
+  .ft_text_2{
+    font-size:30px;
+    color:#89674c
+  }
+  .ft_brand{
+      color:#89674c;
+  }

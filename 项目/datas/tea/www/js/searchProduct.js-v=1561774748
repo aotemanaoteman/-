@@ -1,0 +1,8 @@
+$(function(){
+	$('#searchBox').on('click', '.searchIcon', function() {
+		var keyword = $('#searchBox').find('input').val();
+		if (keyword != '') {
+			location.href = 'https://teastore.xiaoguantea.com/home/prolist?keyword='+keyword;
+		}
+	});
+})
